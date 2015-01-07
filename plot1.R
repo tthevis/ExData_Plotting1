@@ -28,7 +28,12 @@ getFilteredTable <- function(fileName, filterPattern="^[12]/2/2007") {
 input <- getDataFile()
 table <- getFilteredTable(input)
 
-png("plot1.png")
+##
+# Beginning of the main part of the script
+#
+# Accesses the data table and plots results to external file
+##
+png("plot1.png", width = 480, height = 480, bg="transparent")
 hist(table$Global_active_power, main="Global Active Power",
      xlab="Global Active Power (kilowatts)",
      col="red")
